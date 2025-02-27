@@ -6,7 +6,7 @@ export const STARTUP_QUERY =
     _id,
     _createdAt,
     image,
-    description,
+    description,  
     views,
     category,
     title,
@@ -14,7 +14,7 @@ export const STARTUP_QUERY =
     }  
 `);
 export const STARTUP_BY_ID_QUERY =
-  defineQuery(`*[_type=='startup' && _id==$id ][0] {
+  defineQuery(`*[_type == 'startup' && _id== $id ][0] {
   author ->{name,image,username,bio,_id},
     _id,
     _createdAt,
@@ -26,3 +26,17 @@ export const STARTUP_BY_ID_QUERY =
     pitch,
     slug, 
  }`);
+
+export const STARTUP_VIEWS_QUERY =
+  defineQuery(`*[_type == 'startup' && _id== $id ][0] {
+  _id, views
+}`);
+export const AUTHOR_BY_GITHUB_ID_QUERY =
+  defineQuery(`*[_type == 'author' && _id ==$id][0]{
+  id,
+  _id,
+  name,
+  username,
+  email,
+  
+}`);
