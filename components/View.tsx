@@ -16,7 +16,6 @@ const View = async ({ id }: { id: string }) => {
       .set({ views: totalViews + 1 })
       .commit();
   });
-  // TODO, MODIFY OR UPDATE the number of VIEWS
 
   console.log(JSON.stringify(id));
   return (
