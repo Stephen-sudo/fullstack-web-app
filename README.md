@@ -10,6 +10,8 @@ This app is created for clients to pitch their startup ideas, browse other start
 - TailwindCSS
 - ShadCN
 - TypeScript
+- NextAuth.js
+
 
 ## 🔋 Features
 
